@@ -16,7 +16,7 @@ class PhonesController extends Controller
     {
         // $phones = Phone::all();
         // $phones = Phone::orderBy('id','desc')->get();
-        $phone=  Phone::orderBy('id','desc')->paginate(1);
+        $phones=  Phone::orderBy('id','desc')->paginate(1);
         // $phones = Phone::orderBy('id','desc')->get();
         return view('phone.index')->with('phones',$phones);
     }
